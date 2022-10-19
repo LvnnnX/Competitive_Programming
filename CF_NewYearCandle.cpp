@@ -8,19 +8,20 @@
 #define iprint(x) printf("%d\n",x)
 #define pass (void)0
 using namespace std;
-int main(){
-    ll int a;
-    cin >> a;
-    ll int now,last=-1,ans=0;
-    for (ll int i = 0; i < a; i++)
+int main()
+{
+    int a,b,c=0,s=0,x=1;
+    cin >> a >> b;
+    while(a!=0)
     {
-        cin >> now;
-        if(last!=-1){
-            if(now>last){
-                ans+=now-last;
-            }
-        }
-        last = now;
+
+        c+=a;
+        s+=a%b;
+        a=a/b; //used candles / make new
+        if(a==0&&s>b){a=s/b;s=s%b;}
+
     }
-    cout << ans;
+    if(s==b)c++;
+    cout << c << endl;
+    return 0;
 }

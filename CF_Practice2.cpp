@@ -9,18 +9,13 @@
 #define pass (void)0
 using namespace std;
 int main(){
-    ll int a;
+    int a,c=1;
     cin >> a;
-    ll int now,last=-1,ans=0;
-    for (ll int i = 0; i < a; i++)
+    int ans =a;
+    for (int i = a; i > 0; i--)
     {
-        cin >> now;
-        if(last!=-1){
-            if(now>last){
-                ans+=now-last;
-            }
-        }
-        last = now;
+        ans+=(i-1)*c;
+        c++;
     }
-    cout << ans;
+    cout << ans << "\n";
 }

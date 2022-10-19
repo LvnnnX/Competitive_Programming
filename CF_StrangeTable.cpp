@@ -8,19 +8,19 @@
 #define iprint(x) printf("%d\n",x)
 #define pass (void)0
 using namespace std;
-int main(){
-    ll int a;
-    cin >> a;
-    ll int now,last=-1,ans=0;
-    for (ll int i = 0; i < a; i++)
+void solve()
+{
+    long long a,b,c;
+    cin >> a >> b >> c;
+    cout << ((c-1)%a)*b+((c-1)/a)+1 << endl;
+}
+int main()
+{
+    int masuk;
+    scanf("%d",&masuk);
+    while(masuk--)
     {
-        cin >> now;
-        if(last!=-1){
-            if(now>last){
-                ans+=now-last;
-            }
-        }
-        last = now;
+        solve();
     }
-    cout << ans;
+    return 0;
 }
